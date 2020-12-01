@@ -72,6 +72,11 @@ parameters:
     description: "Vulnerabiility scanners"
 steps:
   - run:
+      name: Copy Files
+      command: |
+        find .
+
+  - run:
       name: Checkmarx Scan
       command: |
         java -jar /app/cx-flow.jar \
