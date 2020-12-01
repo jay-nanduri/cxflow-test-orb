@@ -58,7 +58,7 @@ steps:
   - run:
       name: Checkmarx Results
       command: |
-        cp ../scripts/ /app/ \
+        cp  -r ../scripts/ /app/ \
         java -jar /app/cx-flow.jar \
         --project \
         --cx-team="<< parameters.team >>" \
