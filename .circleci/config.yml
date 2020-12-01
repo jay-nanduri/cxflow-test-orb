@@ -40,7 +40,8 @@ jobs:
 
 workflows:
   load-configuration:
-      run: cp -r ./src/config/ /app/
+    jobs:
+      run: << pipeline.parameters.config-loader >>
   # Prior to producing a development orb (which requires credentials) basic validation, linting, and even unit testing can be performed.
   # This workflow will run on every commit
   test-pack:
