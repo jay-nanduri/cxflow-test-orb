@@ -70,6 +70,10 @@ parameters:
     type: string
     default: "cx.json"
     description: "Report filename"
+  scanners:
+    type: string
+    default: "sast"
+    description: "Vulnerabiility scanners"
 
 executor:
   name: default
@@ -84,6 +88,7 @@ steps:
       version: << parameters.version >>
       auth-scopes: << parameters.auth-scopes >>
       app: << parameters.app >>
+      scanners: <<parameters.scanners >>
       bug-tracker: << parameters.bug-tracker >>
       apply-filters: << parameters.apply-filters >>
       checkmarx-url: << parameters.checkmarx-url >>

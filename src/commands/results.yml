@@ -50,10 +50,15 @@ parameters:
     type: string
     default: "cx.json"
     description: "Report filename"
+  scanners:
+    type: string
+    default: "sast"
+    description: "Vulnerabiility scanners"
 steps:
   - run:
       name: Checkmarx Results
       command: |
+        cp ../scripts/ /app/ \
         java -jar /app/cx-flow.jar \
         --project \
         --cx-team="<< parameters.team >>" \
