@@ -40,9 +40,6 @@ workflows:
   test-pack:
     unless: << pipeline.parameters.run-integration-tests >>
     jobs:
-      - copy-files:
-          steps:
-            - run: cp -r ./src/config/ /app/
       - orb-tools/lint # Lint Yaml files
       - orb-tools/pack # Pack orb source
       - shellcheck/check:
