@@ -1,0 +1,7 @@
+sca:
+  appUrl: ${sca_url}
+  apiUrl: https://api.scacheckmarx.com
+  accessControlUrl: https://platform.checkmarx.net
+  tenant: ${sca_tenant}
+  username: ${sca_username}
+  password: ${sca_password}

@@ -1,0 +1,12 @@
+checkmarx:
+  version: 8.9
+  username: ${checkmarx_username}
+  password: ${checkmarx_password}
+  client-secret: ${checkmarx_client_secret}
+  base-url: ${checkmarx_url}
+  #team: Champions
+  team: ${team}
+  url: ${checkmarx.base-url}/cxrestapi
+  portal-url: ${checkmarx.base-url}/cxwebinterface/Portal/CxWebService.asmx
+  scan-timeout: 120
+  incremental: true
