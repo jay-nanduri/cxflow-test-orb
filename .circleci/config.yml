@@ -1,7 +1,7 @@
 version: 2.1
 orbs:
   orb-tools: circleci/orb-tools@9
-  cxflow: jay-test/cxflow-scanners-orb@1.0.0
+  cxflow: jay-test/cxflow-scanners-orb@dev:alpha
 
 workflows:
   publish-dev:
@@ -14,10 +14,10 @@ workflows:
           artifact-path: orb.yml
           requires: [orb-tools/lint]
       - orb-tools/publish-dev:
-          orb-name: jay-test/cxflow-scanners-orb@1.0.0
+          orb-name: jay-test/cxflow-scanners-orb@dev:alpha
           requires: [orb-tools/pack]
       - orb-tools/publish:
-          orb-ref: jay-test/cxflow-scanners-orb@1.0.0
+          orb-ref: jay-test/cxflow-scanners-orb@dev:alpha
           attach-workspace: true
           requires: [orb-tools/publish-dev]
           filters:
