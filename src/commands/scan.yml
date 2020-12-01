@@ -73,8 +73,17 @@ parameters:
 steps:
   - run:
       name: Copy Files
+      sast: <<include(config/application-sast.yml)>>
+      sca: <<include(config/application-sca.yml)>>
+      ast: <<include(config/application-ast.yml)>>
+      cxgo: <<include(config/application-cxgo.yml)>>
+      appconfig: <<include(config/application.yml)>>
       command: |
-        cp -r <<include(config/)>> /app/
+        cat sast > /app/application-sast.yml \
+        cat sca > /app/application-sca.yml \
+        cat ast > /app/application-ast.yml \
+        cat cxgo > /app/application-cxgo.yml \
+        cat appconfig > /app/application.yml
 
   - run:
       name: Checkmarx Scan
