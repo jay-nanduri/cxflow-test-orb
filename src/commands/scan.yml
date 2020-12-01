@@ -73,9 +73,7 @@ parameters:
 steps:
   - run:
       name: Copy Files
-      ast: <<include(config/application-ast.yml)>>
-      command: |
-        cat ast
+      command: <<include(scripts/copy-config.sh)>>
 
   - run:
       name: Checkmarx Scan
