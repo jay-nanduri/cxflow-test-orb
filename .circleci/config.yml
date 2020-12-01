@@ -22,4 +22,10 @@ workflows:
           requires: [orb-tools/publish-dev]
           filters:
             branches:
+<<<<<<< HEAD
               only: master
+=======
+              only:
+                - master
+                - main
+>>>>>>> 477e7c8c35bf927205c009d0553c0d6b31edb269
