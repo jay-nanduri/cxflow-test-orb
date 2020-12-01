@@ -74,7 +74,6 @@ steps:
   - run:
       name: Checkmarx Scan
       command: |
-        cp -r ../scripts/ /app/ \
         java -jar /app/cx-flow.jar \
         --scan \
         --cx-team="<< parameters.team >>" \
