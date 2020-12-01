@@ -17,7 +17,7 @@ workflows:
           orb-name: jay-test/cxflow-scanners-orb@dev:alpha
           requires: [orb-tools/pack]
       - orb-tools/publish:
-          orb-ref: jay-test/cxflow-scanners-orb@1.0.0
+          orb-ref: jay-test/cxflow-scanners-orb@dev:alpha
           attach-workspace: true
           requires: [orb-tools/publish-dev]
           filters:
