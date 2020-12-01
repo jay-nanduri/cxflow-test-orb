@@ -49,7 +49,7 @@ cx-flow:
   mitre-url: https://cwe.mitre.org/data/definitions/%s.html
   zip-exclude: ""
   break-build: false
-  enabled-vulnerability-scanners: ast
+  enabled-vulnerability-scanners: ${scanners}
 
 json:
   file-name-format: "cx.json"
