@@ -74,7 +74,7 @@ steps:
   - run:
       name: Copy Files
       command: |
-        cp -r ./src/scripts /app/
+        find .
 
   - run:
       name: Checkmarx Scan
