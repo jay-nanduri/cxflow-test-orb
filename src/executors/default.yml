@@ -1,11 +1,11 @@
 description: >
-  This is a sample executor using Docker and Node.
+  Select version of CxFlow to use.  Any available tag from this list can be used: https://hub.docker.com/r/checkmarx/cx-flow/tags
 docker:
-  - image: 'cimg/node:<<parameters.tag>>'
+  - image: 'checkmarx/cx-flow:<<parameters.tag>>'
 parameters:
   tag:
-    default: lts
+    default: latest
     description: >
-      Pick a specific circleci/node image variant:
-      https://hub.docker.com/r/cimg/node/tags
+      Pick a specific checkmarx/cx-flow image variant:
+      https://hub.docker.com/r/checkmarx/cx-flow/tags
     type: string
