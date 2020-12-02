@@ -5,7 +5,7 @@ parameters:
     type: string
     default: ""
     description: "SCA configuration"
-  path:
+  sca-path:
     type: string
     default: "src/config"
     description: "Path to config files"
@@ -14,4 +14,7 @@ executor:
   tag: << parameters.tag >>
 
 steps:
-  -run: cat "<< parameters.path >>" > sca
+  -run:
+    name: Copy Files
+    command: |
+      echo "<< parameters.sca-path >>"
