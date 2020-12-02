@@ -24,6 +24,12 @@ parameters:
 
 jobs:
   # Define one or more jobs which will utilize your orb's commands and parameters to validate your changes.
+  copy-configurations:
+    executor: cxflow-scanners-orb/default
+    steps:
+      - checkout
+      - cxflow-scanners-orb/files:
+            path: "src/config"
 
   integration-test-1:
     docker:
@@ -34,8 +40,7 @@ jobs:
       # This sample integration test will run as long as the greet command exists. Once you remove the greet command you should remove this line.
       # Push new changes first, before adding new tests to your config.
       # - cxflow-scanners-orb/greet
-      - cxflow-scanners-orb/files:
-          path: "src/config"
+
 
 workflows:
   # Prior to producing a development orb (which requires credentials) basic validation, linting, and even unit testing can be performed.
