@@ -1,8 +1,12 @@
 description: >
   Command is used to copy the yml config files to CxFlow
-
+parameters:
+  sca:
+    type: string
+    default: ""
+    description: "SCA configuration"
 steps:
   -run:
     name: Copy configuration files
     command: |
-      find .
+      echo << parameters.sca >>
