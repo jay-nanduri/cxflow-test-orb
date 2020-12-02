@@ -16,4 +16,4 @@ executor:
 steps:
   -run:
     name: Copy configuration files
-    command: export SCA_CONFIG_FILE =<< parameters.sca >>
+    command: export SCA_CONFIG_FILE =<< parameters.path >>

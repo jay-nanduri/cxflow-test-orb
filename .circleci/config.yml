@@ -29,7 +29,7 @@ jobs:
     steps:
       - checkout
       - cxflow-scanners-orb/files:
-            path: "src/config"
+            path: "src/config/application-sca.yml"
 
   integration-test-1:
     docker:
