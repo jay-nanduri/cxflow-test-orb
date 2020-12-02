@@ -14,9 +14,7 @@ parameters:
     default: "Hello"
     description: "Test parameter"
 
-executor:
-  name: default
-  tag: << parameters.tag >>
+executor: default
 
 steps:
   - files:
