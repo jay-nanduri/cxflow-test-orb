@@ -14,4 +14,4 @@ executor:
   tag: << parameters.tag >>
 
 steps:
-  -run: cat << parameters.path >> > sca
+  -run: cat "<< parameters.path >>" > sca
