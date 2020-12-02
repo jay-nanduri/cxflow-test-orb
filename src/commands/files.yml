@@ -9,9 +9,13 @@ parameters:
     type: string
     default: "src/config"
     description: "Path to config files"
+  test-param:
+    type: string
+    default: "Hello"
+    description: "Test parameter"
 steps:
   -run:
     name: Copy Files
     command: |
-      echo "<< parameters.sca-path >>"
+      echo "Hello << parameters.test-param >>"
 

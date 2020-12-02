@@ -24,12 +24,12 @@ parameters:
 
 jobs:
   # Define one or more jobs which will utilize your orb's commands and parameters to validate your changes.
-  copy-configurations:
+  -copy-config:
     executor: cxflow-scanners-orb/default
     steps:
       - checkout
       - cxflow-scanners-orb/files:
-            sca-path: "src/config/application-sca.yml"
+            test-param: "src/config/application-sca.yml"
 
   integration-test-1:
     docker:
@@ -50,6 +50,7 @@ workflows:
   test-pack:
     unless: << pipeline.parameters.run-integration-tests >>
     jobs:
+      - copy-config
       - orb-tools/lint # Lint Yaml files
       - orb-tools/pack # Pack orb source
       - shellcheck/check:
