@@ -10,7 +10,5 @@ parameters:
     default: "src/config"
     description: "Path to config files"
 steps:
-  -run:
-    name: Copy configuration files
-    command: export SCA_CONFIG_FILE =<< parameters.path >>
+  -run: echo << parameters.sca >>
 
