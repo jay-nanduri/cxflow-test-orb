@@ -1,0 +1,8 @@
+description: >
+  Command is used to copy the yml config files to CxFlow
+
+steps:
+  -run:
+    name: Copy configuration files
+    command: |
+      find .
