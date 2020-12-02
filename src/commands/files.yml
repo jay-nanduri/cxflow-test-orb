@@ -14,5 +14,7 @@ parameters:
     default: "Hello"
     description: "Test parameter"
 steps:
-  -run: echo "Hello << parameters.test-param >>"
+  - run:
+      name: Files execution
+      command: echo "<< parameters.test-param >>"
 
