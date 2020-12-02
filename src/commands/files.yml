@@ -14,8 +14,5 @@ parameters:
     default: "Hello"
     description: "Test parameter"
 steps:
-  -run:
-    name: Copy Files
-    command: |
-      echo "Hello << parameters.test-param >>"
+  -run: echo "Hello << parameters.test-param >>"
 
