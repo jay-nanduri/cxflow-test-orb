@@ -12,5 +12,5 @@ parameters:
 steps:
   -run:
     name: Copy configuration files
-    command: cat << parameters.sca >>
+    command: export SCA_CONFIG_FILE =<< parameters.sca >>
 
