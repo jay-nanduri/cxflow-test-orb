@@ -5,8 +5,13 @@ parameters:
     type: string
     default: ""
     description: "SCA configuration"
+  path:
+    type: string
+    default: "src/config"
+    description: "Path to config files"
 steps:
   -run:
     name: Copy configuration files
     command: |
       echo << parameters.sca >>
+
