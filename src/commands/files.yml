@@ -13,5 +13,5 @@ steps:
   -run:
     name: Copy configuration files
     command: |
-      echo << parameters.sca >>
+      cat << parameters.sca >>
 

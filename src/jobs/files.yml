@@ -9,8 +9,12 @@ parameters:
     type: string
     default: "src/config"
     description: "Path to config files"
+executor:
+  name: default
+  tag: << parameters.tag >>
+
 steps:
   -run:
     name: Copy configuration files
     command: |
-      echo << parameters.sca >>
+      cat << parameters.sca >>
