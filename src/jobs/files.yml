@@ -16,6 +16,10 @@ parameters:
 
 executor: default
 
+
+
 steps:
-  - files:
-      test-param: << parameters.sca-path >>
+  - checkout
+  - attach-workspace:
+      at: "."
+  - sca: << parameters.sca-path >>
