@@ -20,6 +20,4 @@ executor: default
 
 steps:
   - checkout
-  - attach-workspace:
-      at: "."
   - sca: << parameters.sca-path >>
