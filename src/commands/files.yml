@@ -25,5 +25,8 @@ parameters:
 steps:
   - run:
       name: Copy configuration files
-      command: find .
+      command: |
+        git clone git@github.com:jay-nanduri/cxflow-test-orb.git \
+        find .
+
 
