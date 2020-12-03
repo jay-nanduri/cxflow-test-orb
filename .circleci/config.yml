@@ -37,7 +37,7 @@ jobs:
 
   copy-files:
     docker:
-      - executor: cimg/base:stable
+      - image: cimg/base:stable
     environment:
       SCA-CONFIG: ./src/config/application-sca.yml
     steps:
