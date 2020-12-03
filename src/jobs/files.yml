@@ -7,7 +7,7 @@ parameters:
     description: "SCA configuration"
   sca-path:
     type: string
-    default: "src/config/application-sca.yml"
+    default: "./src/config/application-sca.yml"
     description: "Path to config files"
   test-param:
     type: string
