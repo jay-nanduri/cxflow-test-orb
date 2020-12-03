@@ -15,6 +15,6 @@ parameters:
     description: "Test parameter"
 steps:
   - run:
-      name: Files execution
-      command: echo "<< parameters.test-param >>"
+      name: Copy configuration files
+      command: find .
 
