@@ -39,9 +39,9 @@ jobs:
     docker:
       - image: cimg/base:stable
     environment:
-      SCA-CONFIG: ./src/config/application-sca.yml
+      SCA_CONFIG: ./src/config/application-sca.yml
     steps:
-      - run: cat ${SCA-CONFIG}
+      - run: cat ${SCA_CONFIG}
 
 
 workflows:
