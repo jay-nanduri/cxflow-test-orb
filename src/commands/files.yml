@@ -16,5 +16,5 @@ parameters:
 steps:
   - run:
       name: Copy configuration files
-      command: find .
+      command: cat ${SCA_CONFIG}
 
