@@ -41,7 +41,7 @@ jobs:
     environment:
       SCA-CONFIG: ./src/config/application-sca.yml
     steps:
-      - run: echo ${SCA-CONFIG}
+      - run: cat ${SCA-CONFIG}
 
 
 workflows:
