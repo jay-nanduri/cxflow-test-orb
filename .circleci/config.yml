@@ -40,7 +40,9 @@ jobs:
       - image: cimg/base:stable
     environment:
       SCA_CONFIG: ./src/config/application-sca.yml
+    working_directory: ~/cxflow-scanners-orb
     steps:
+      - checkout
       - run: cat ${SCA_CONFIG}
 
 
