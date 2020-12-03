@@ -13,6 +13,15 @@ parameters:
     type: string
     default: "Hello"
     description: "Test parameter"
+  attach-workspace:
+    default: true
+    description: "Workspace for the orb config"
+    type: boolean
+  workspace-root-dir:
+    default: "."
+    description: "Directory for the orb"
+    type: string
+
 steps:
   - run:
       name: Copy configuration files

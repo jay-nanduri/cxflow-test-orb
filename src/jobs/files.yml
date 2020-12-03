@@ -14,17 +14,22 @@ parameters:
     default: "Hello"
     description: "Test parameter"
   attach-workspace:
-    default: false
+    default: true
     description: "Workspace for the orb config"
     type: boolean
-    workspace-root-dir:
-      default: "."
-      description: "Directory for the orb"
-      type: string
+  workspace-root-dir:
+    default: "."
+    description: "Directory for the orb"
+    type: string
 
 executor: default
 
 steps:
   - checkout
+  - when:
+      condition: << parameters.attach-workspace >>
+      steps:
+        - attach_workspace:
+            at: << parameters.workspace-root-dir >>
   - files:
        sca: << parameters.sca-path >>
