@@ -46,6 +46,10 @@ workflows:
   # Prior to producing a development orb (which requires credentials) basic validation, linting, and even unit testing can be performed.
   # This workflow will run on every commit
 
+  copy-config:
+    jobs:
+      - copy-files
+
   test-pack:
     unless: << pipeline.parameters.run-integration-tests >>
     jobs:
@@ -89,7 +93,6 @@ workflows:
     jobs:
       # Run any integration tests defined within the `jobs` key.
       - integration-test-1
-      - copy-files
       # Publish a semver version of the orb. relies on
       # the commit subject containing the text "[semver:patch|minor|major|skip]"
       # as that will determine whether a patch, minor or major
