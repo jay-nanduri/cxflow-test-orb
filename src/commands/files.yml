@@ -7,7 +7,7 @@ parameters:
     description: "SCA configuration"
   sca-path:
     type: string
-    default: "src/config"
+    default: "src/config/application-sca.yml"
     description: "Path to config files"
   test-param:
     type: string
@@ -16,5 +16,5 @@ parameters:
 steps:
   - run:
       name: Copy configuration files
-      command: find .
+      command: cat "<< parameters.sca-path >>"
 
