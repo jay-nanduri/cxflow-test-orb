@@ -26,3 +26,4 @@ executor: default
 
 steps:
   - add_ssh_keys
+  - files
