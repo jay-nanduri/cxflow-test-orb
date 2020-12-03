@@ -39,7 +39,7 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
-      - cxflow-scanners-orb/copy-config
+      - cxflow-scanners-orb/files
 
 
 workflows:
