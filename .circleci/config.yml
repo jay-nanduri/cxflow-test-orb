@@ -35,11 +35,11 @@ jobs:
       # Push new changes first, before adding new tests to your config.
       # - cxflow-scanners-orb/greet
 
-   copy-files:
-     docker:
-       - image: cimg/base:stable
-     steps:
-       - cxflow-scanners-orb/copy-config
+  copy-files:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - cxflow-scanners-orb/copy-config
 
 
 workflows:
