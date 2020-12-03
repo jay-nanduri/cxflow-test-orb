@@ -16,8 +16,7 @@ parameters:
 
 executor: default
 
-
-
 steps:
   - checkout
-  - sca: << parameters.sca-path >>
+  - files:
+       sca: << parameters.sca-path >>
