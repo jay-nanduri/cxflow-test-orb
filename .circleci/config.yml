@@ -37,9 +37,11 @@ jobs:
 
   copy-files:
     docker:
-      - image: cimg/base:stable
+      - executor: default
+    environment:
+      SCA-CONFIG: ./src/config/application-sca.yml
     steps:
-      - cxflow-scanners-orb/files
+      - run: echo ${SCA-CONFIG}
 
 
 workflows:
