@@ -66,7 +66,7 @@ parameters:
     type: string
     default: "cx.json"
     description: "Report filename"
-  enabled-vulnerability-scanners:
+  scanners:
     type: string
     default: "sast"
     description: "Vulnerabiility scanners"
@@ -96,7 +96,7 @@ steps:
         --cx-team="<< parameters.team >>" \
         --cx-project="<< parameters.project >>" \
         --app="<< parameters.app >>" \
-        --spring.profiles.active="<< parameters.enabled-vulnerability-scanners >>" \
+        --spring.profiles.active="<< parameters.scanners >>" \
         --f=. \
         --cx-flow.bug-tracker="<< parameters.bug-tracker >>" \
         --cx-flow.bug-tracker-impl="<< parameters.bug-tracker >>" \
