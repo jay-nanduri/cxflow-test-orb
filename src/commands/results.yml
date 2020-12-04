@@ -50,10 +50,27 @@ parameters:
     type: string
     default: "cx.json"
     description: "Report filename"
-  scanners:
+  enabled-vulnerability-scanners:
     type: string
     default: "sast"
     description: "Vulnerabiility scanners"
+  sca-url:
+    type: string
+    default: ''
+    description: 'SCA Scan URL'
+  sca-username:
+    type: string
+    default: ''
+    description: 'SCA Username'
+  sca-password:
+    type: string
+    default: ''
+    description: 'SCA Password'
+  sca-tenant:
+    type: string
+    default: ''
+    description: 'SCA Tenant'
+
 steps:
   - run:
       name: Checkmarx Results
@@ -63,6 +80,7 @@ steps:
         --cx-team="<< parameters.team >>" \
         --cx-project="<< parameters.project >>" \
         --app="<< parameters.app >>" \
+        --spring.profiles.active="<< parameters.enabled-vulnerability-scanners >>" \
         --cx-flow.bug-tracker="<< parameters.bug-tracker >>" \
         --cx-flow.bug-tracker-impl="<< parameters.bug-tracker >>" \
         << parameters.apply-filters >> \

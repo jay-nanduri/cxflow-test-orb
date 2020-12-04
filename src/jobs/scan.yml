@@ -70,10 +70,26 @@ parameters:
     type: string
     default: "cx.json"
     description: "Report filename"
-  scanners:
+  enabled-vulnerability-scanners:
     type: string
     default: "sast"
     description: "Vulnerabiility scanners"
+  sca-url:
+    type: string
+    default: ''
+    description: 'SCA Scan URL'
+  sca-username:
+    type: string
+    default: ''
+    description: 'SCA Username'
+  sca-password:
+    type: string
+    default: ''
+    description: 'SCA Password'
+  sca-tenant:
+    type: string
+    default: ''
+    description: 'SCA Tenant'
 
 executor:
   name: default
@@ -88,7 +104,7 @@ steps:
       version: << parameters.version >>
       auth-scopes: << parameters.auth-scopes >>
       app: << parameters.app >>
-      scanners: <<parameters.scanners >>
+      enabled-vulnerability-scanners: <<parameters.enabled-vulnerability-scanners >>
       bug-tracker: << parameters.bug-tracker >>
       apply-filters: << parameters.apply-filters >>
       checkmarx-url: << parameters.checkmarx-url >>

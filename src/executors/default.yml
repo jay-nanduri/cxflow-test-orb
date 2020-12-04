@@ -1,7 +1,7 @@
 description: >
   Select version of CxFlow to use.  Any available tag from this list can be used: https://hub.docker.com/r/checkmarx/cx-flow/tags
 docker:
-  - image: 'checkmarx/cx-flow:<<parameters.tag>>'
+  - image: 'mithileshpawar/cxflow:<<parameters.tag>>'
 parameters:
   tag:
     default: latest
