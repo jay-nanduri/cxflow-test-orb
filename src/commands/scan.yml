@@ -82,18 +82,7 @@ parameters:
     type: string
     default: ''
     description: 'SCA SCAN Access Control URL'
-#  sca-username:
-#    type: string
-#    default: ''
-#    description: 'SCA Username'
-#  sca-password:
-#    type: string
-#    default: ''
-#    description: 'SCA Password'
-#  sca-tenant:
-#    type: string
-#    default: ''
-#    description: 'SCA Tenant'
+
 
 steps:
   - run:
@@ -121,9 +110,6 @@ steps:
         --sca.appUrl="<< parameters.sca-appUrl >>" \
         --sca.apiUrl="<< parameters.sca-apiUrl >>" \
         --sca.accessControlUrl="<< parameters.sca-accessControlUrl >>" \
-#        --sca.tenant="<< parameters.sca-tenant >>" \
-#        --sca.username="<< parameters.sca-username >>" \
-#        --sca.password="<< parameters.sca-password >>" \
         --json.file-name-format="<< parameters.report-file >>" \
         --json.data-folder="<< parameters.report-folder >>" \
         << parameters.params >>
