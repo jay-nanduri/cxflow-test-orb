@@ -98,5 +98,10 @@ steps:
       report-folder: << parameters.report-folder >>
       report-file: << parameters.report-file >>
       params: << parameters.params >>
+      sca-appUrl: << parameters.sca-appUrl >>
+      sca-apiUrl: <<parameters.sca-apiUrl >>
+      sca-username: <<parameters.sca-username >>
+      sca-password: <<parameters.sca-password >>
+      sca-tenant: <<parameters.sca-tenant >>
   - store_artifacts:
       path: << parameters.report-file >>
