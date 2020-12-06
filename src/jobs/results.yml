@@ -70,6 +70,10 @@ parameters:
     type: string
     default: ''
     description: 'SCA SCAN Access Control URL'
+  ast-apiUrl:
+    type: string
+    default: ''
+    description: 'AST scan API URL'
 
 executor:
   name: default
@@ -93,5 +97,6 @@ steps:
       sca-appUrl: << parameters.sca-appUrl >>
       sca-apiUrl: << parameters.sca-apiUrl >>
       sca-accessControlUrl: << parameters.sca-accessControlUrl >>
+      ast-apiUrl: << parameters.ast-apiUrl >>
   - store_artifacts:
       path: << parameters.report-file >>

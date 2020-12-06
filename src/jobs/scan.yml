@@ -86,7 +86,10 @@ parameters:
     type: string
     default: ''
     description: 'SCA SCAN Access Control URL'
-
+  ast-apiUrl:
+    type: string
+    default: ''
+    description: 'AST scan API URL'
 
 executor:
   name: default
