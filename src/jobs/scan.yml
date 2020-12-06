@@ -117,5 +117,6 @@ steps:
       sca-appUrl: << parameters.sca-appUrl >>
       sca-apiUrl: <<parameters.sca-apiUrl >>
       sca-accessControlUrl: << parameters.sca-accessControlUrl >>
+      ast-apiUrl: << parameters.ast-apiUrl >>
   - store_artifacts:
       path: << parameters.report-file >>
