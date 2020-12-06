@@ -58,10 +58,14 @@ parameters:
     type: string
     default: "sast"
     description: "Vulnerabiility scanners"
-  sca-url:
+  sca-appUrl:
     type: string
     default: ''
     description: 'SCA Scan URL'
+  sca-apiUrl:
+    type: string
+    default: ''
+    description: 'SCA Scan API URL'
   sca-username:
     type: string
     default: ''
