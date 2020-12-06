@@ -94,6 +94,10 @@ parameters:
     type: string
     default: 'Checkmarx Default'
     description: 'Preset for Checkmarx AST Scan'
+  ast-incremental:
+    type: boolean
+    default: false
+    description: 'AST scan incremental?'
 
 executor:
   name: default
@@ -123,5 +127,6 @@ steps:
       sca-accessControlUrl: << parameters.sca-accessControlUrl >>
       ast-apiUrl: << parameters.ast-apiUrl >>
       ast-preset: << parameters.ast-preset >>
+      ast-incremental: << parameters.ast-incremental >>
   - store_artifacts:
       path: << parameters.report-file >>
