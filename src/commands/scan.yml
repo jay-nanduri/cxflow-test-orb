@@ -78,6 +78,10 @@ parameters:
     type: string
     default: ''
     description: 'SCA Scan API URL'
+  sca-accessControlUrl:
+    type: string
+    default: ''
+    description: 'SCA SCAN Access Control URL'
   sca-username:
     type: string
     default: ''
@@ -116,6 +120,7 @@ steps:
         --checkmarx.scan-timeout=<< parameters.scan-timeout >> \
         --sca.appUrl="<< parameters.sca-appUrl >>" \
         --sca.apiUrl="<< parameters.sca-apiUrl >>" \
+        --sca.accessControlUrl="<< parameters.sca-accessControlUrl >>" \
         --sca.tenant="<< parameters.sca-tenant >>" \
         --sca.username="<< parameters.sca-username >>" \
         --sca.password="<< parameters.sca-password >>" \
