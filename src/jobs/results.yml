@@ -74,6 +74,10 @@ parameters:
     type: string
     default: ''
     description: 'AST scan API URL'
+  ast-preset:
+    type: string
+    default: 'Checkmarx Default'
+    description: 'Preset for Checkmarx AST Scan'
 
 executor:
   name: default
@@ -98,5 +102,6 @@ steps:
       sca-apiUrl: << parameters.sca-apiUrl >>
       sca-accessControlUrl: << parameters.sca-accessControlUrl >>
       ast-apiUrl: << parameters.ast-apiUrl >>
+      ast-preset: << parameters.ast-preset >>
   - store_artifacts:
       path: << parameters.report-file >>
