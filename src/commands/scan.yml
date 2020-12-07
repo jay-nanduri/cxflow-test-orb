@@ -94,6 +94,26 @@ parameters:
     type: boolean
     default: false
     description: 'AST scan incremental?'
+  cxgo-base-url:
+    type: string
+    default: 'https://api.checkmarx.net'
+    description: 'Base URL for CxGo scan'
+  cxgo-portal-url:
+    type: string
+    default: 'https://cloud.checkmarx.net'
+    description: 'Portal URL for CxGo scan'
+  cxgo-multi-tenant:
+    type: boolean
+    default: true
+    description: 'Multi Tenant for CxGo'
+  cxgo-configuration:
+    type: string
+    default: ''
+    description: 'Configuration for CxGo scan'
+  cxgo-scan-preset:
+    type: string
+    default: ''
+    description: 'Scan presets for CxGo'
 
 steps:
   - run:
@@ -124,6 +144,12 @@ steps:
         --ast.apiUrl="<< parameters.ast-apiUrl >>" \
         --ast.preset="<< parameters.ast-preset >>" \
         --ast.incremental="<< parameters.ast-incremental >>" \
+        --cxgo.team="<< parameters.team >>" \
+        --cxgo.base-url="<< parameters.cxgo-base-url >>" \
+        --cxgo.portal-url="<< parameters.cxgo-portal-url >>" \
+        --cxgo.multi-tenant="<< parameters.cxgo-multi-tenant >>" \
+        --cxgo.configuration="<< parameters.cxgo-configuration >>" \
+        --cxgo.scan-preset="<< parameters.cxgo-scan-preset >>" \
         --json.file-name-format="<< parameters.report-file >>" \
         --json.data-folder="<< parameters.report-folder >>" \
         << parameters.params >>
